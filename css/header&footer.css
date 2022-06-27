@@ -267,6 +267,7 @@
     display: block;
     position: relative;
     z-index: 15;
+    min-width: 26px;
     width: 26px;
     height: 18px;
     margin-right: 15px;
@@ -298,21 +299,21 @@
 
   .burger__icon span {
     top: 50%;
-    transform: scale(1) translate(0, -50%);
+    transform: translate(0, -50%);
   }
 
   .burger__icon._active span {
-    transform: scale(0);
+    transform: rotate(-135deg);
   }
 
   .burger__icon._active::before {
     top: 50%;
-    transform: rotate(-45deg) translate(0, -50%);
+    transform: rotate(-45deg);
   }
 
   .burger__icon._active::after {
     bottom: 50%;
-    transform: rotate(45deg) translate(0, 50%);
+    transform: rotate(-45deg) translateY(50%) scale(0);
   }
 }
 
